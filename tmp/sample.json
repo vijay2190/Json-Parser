@@ -1,0 +1,129 @@
+{
+    "version": "OBMC2.16",
+    "ExtendedVersion": "None",
+    "CompatibleName": "BIOS",
+    "MachineName": "xyz",
+    "Files": [
+      {
+        "FileName": "file1.txt",
+        "Hash": "efgh",
+        "SkipRegions": [
+          {
+            "Offset": "0x00040000",
+            "SizeInBytes": "0xFFFF"
+          },
+          {
+            "Offset": "0x001000000",
+            "SizeInBytes": "0x9FFFF"
+          }
+        ]
+      },
+      {
+        "FileName": "file.txt",
+        "Hash": "qrst"
+      },
+      {
+        "FileName": "file2.txt",
+        "Hash": "abcd",
+        "SkipRegions": [
+          {
+            "Offset": "0x00050000",
+            "SizeInBytes": "0xFFFF"
+          },
+          {
+            "Offset": "0x001000000",
+            "SizeInBytes": "0x9FFFF"
+          }
+        ]
+      }
+    ]
+}
+
+  
+
+
+  $ cat file1.txt.SkipRegions.json
+  {
+    "SkipRegions": [
+          {
+            "Offset": "0x00040000",
+            "SizeInBytes": "0xFFFF"
+          },
+          {
+            "Offset": "0x0090000",
+            "SizeInBytes": "65535"
+          },
+          {
+            "Offset": "0x00180000",
+            "SizeInBytes": "0x8FFFF"
+          },
+          {
+            "Offset": "0x001000000",
+            "SizeInBytes": "0x9FFFF"
+          }
+    ]
+  }
+  
+
+
+
+  //Eg1
+
+{
+    "version": "OBMC2.16",
+    "ExtendedVersion": "None",
+    "CompatibleName": "BIOS",
+    "MachineName": "xyz",
+    "Files": [
+      {
+        "FileName": "file.txt",
+        "Hash": "qrst"
+      },
+    ]
+}
+
+
+
+//------------------------------
+
+
+{
+  "version": "yyy.OBMC.24.05.10",
+  "ExtendedVersion": "None",
+  "CompatibleName": "xyz.xxxx.Software.Element.wcs.Type.BIOS",
+  "MachineName": "zzz-yyy",
+  "Files": [
+    {
+      "FileName": "yyy.0.BS.1B09.GN.1.7z",
+      "Hash": "efgh",
+      "SkipRegions": [
+        {
+          "Offset": "0x00040000",
+          "SizeInBytes": "0xFFFF"
+        },
+        {
+          "Offset": "0x001000000",
+          "SizeInBytes": "0x9FFFF"
+        }
+      ]
+    },
+	{
+      "FileName": "yyy.0.BS.1B09.GN.1.7z",
+      "Hash": "qrst"
+    },
+	{
+      "FileName": "file2.txt",
+      "Hash": "abcd",
+      "SkipRegions": [
+        {
+          "Offset": "0x00050000",
+          "SizeInBytes": "0xFFFF"
+        },
+        {
+          "Offset": "0x001000000",
+          "SizeInBytes": "0x9FFFF"
+        }
+      ]
+    }
+  ]
+}

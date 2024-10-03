@@ -1,0 +1,22 @@
+{
+    "version": "OBMC2.16",
+    "ExtendedVersion": "None",
+    "CompatibleName": "BIOS",
+    "MachineName": "xyz",
+    "Files": [
+        {
+            "FileName": "file1.txt",
+            "Hash": "55ae75d991c770d8f3ef07cbfde124ffce9c420da5db6203afab700b27e10cf9",
+            "SkipRegions": [
+                {
+                    "Offset": "0x00040000",
+                    "SizeInBytes": "0xFFFF"
+                },
+                {
+                    "Offset": "0x001000000",
+                    "SizeInBytes": "0x9FFFF"
+                }
+            ]
+        }
+    ]
+}

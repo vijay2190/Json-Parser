@@ -1,0 +1,12 @@
+{
+    "SkipRegions": [
+        {
+            "Offset": "0x00040000",
+            "SizeInBytes": "0xFFFF"
+        },
+        {
+            "Offset": "0x001000000",
+            "SizeInBytes": "0x9FFFF"
+        }
+    ]
+}
